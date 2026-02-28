@@ -1,0 +1,39 @@
+#about {
+    position: relative;
+    background: url("images/background.jpg") center / cover no-repeat;
+    padding: 120px 10%;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.69); 
+    z-index: 0;
+}
+
+.about-section {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.about-title {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.highlight-text {
+    color: #facc15;
+    font-weight: bold;
+}
+#about {
+    background-attachment: fixed;
+}

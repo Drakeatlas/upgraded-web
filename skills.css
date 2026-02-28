@@ -1,0 +1,45 @@
+#skills {
+    position: relative;
+    background: url("images/background.jpg") center / cover no-repeat;
+    padding: 120px 10%;
+}
+
+#skills::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.69);
+    z-index: 0;
+}
+
+.skills-section {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.skills-title {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.skills-list {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+#skills {
+    background-attachment: fixed;
+}
+
+.skills-list li.skill-highlight {
+    color: #facc15;
+    font-weight: bold;
+}
+
