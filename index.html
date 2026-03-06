@@ -14,12 +14,22 @@
     <link rel="stylesheet" href="skills.css">
     <link rel="stylesheet" href="works.css">
     <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "5QixcIQkmvPX7YQp5",
+      });
+   })();
+</script>
 </head>
 <body>
 
 <header class="header">
     <div class="container">
-        <div class="welcome-text">Welcome to my portfolio</div>
+        <div class="welcome-text"></div>
         <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -108,17 +118,36 @@
 <section id="contact" class="section contact-section">
     <h2 class="contact-title">Contact Me</h2>
 
-    <div class="contact-info">
-        <p>
-             <span>Email:</span>
-            <a>devinlestat18@gmail.com</a>
-        </p>
+    <div class="contact-container">
 
-        <p>
-             <span>Phone:</span>
-            <a>+63 916 314 9501</a>
-        </p>
+        <div class="contact-info">
+            <p><span>Email:</span> devinlestat18@gmail.com</p>
+            <p><span>Phone:</span> +63 916 314 9501</p>
+        </div>
+
+        <form class="contact-form" onsubmit="sendEmail(); return false;">
+
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="input-group">
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="send-btn">Send Message</button>
+
+        </form>
+
     </div>
+
+    <script src="script.js"></script>
 </section>
-
-
